@@ -1,13 +1,13 @@
 local CoreGui = game:GetService("StarterGui")
 CoreGui:SetCore("SendNotification", {
-  Title = "AdvanceTech Arsenal",
+  Title = "VortX Arsenal",
   Text = "Working For Mobile and PC Executor",
   Duration = 8,
 })
 
 game:GetService("StarterGui"):SetCore("SendNotification", {
-  Title = "Modify By:",
-  Text = "AdvancedFalling Team",
+  Title = "Made By:",
+  Text = "VortX Owner",
   Icon = "rbxthumb://type=Asset&id=13508183954&w=150&h=150",
   Duration = 8,
 })
@@ -31,7 +31,7 @@ game:GetService("RunService").Heartbeat:connect(function(step)if flying and c an
 
 
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/bitef4/Recode/main/UI/Kavo_1.lua"))()
-local Window = Library.CreateLib("VortX Hub | Arsenal | v1.5", "BlueTheme")
+local Window = Library.CreateLib("VortX Hub | Arsenal | v1.5", "RedTheme")
 
 local Welcome = Window:NewTab("Main")
 local MainSection = Welcome:NewSection("Welcome To AdvanceTech | " .. game.Players.LocalPlayer.Name)
