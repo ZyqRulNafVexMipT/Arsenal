@@ -12,8 +12,6 @@ game:GetService("StarterGui"):SetCore("SendNotification", {
   Duration = 8,
 })
 
-
-
 -- actual fly script
 local flySettings={fly=false,flyspeed=50}
 local c local h local bv local bav local cam local flying local p=game.Players.LocalPlayer
@@ -25,16 +23,11 @@ game:GetService("UserInputService").InputEnded:connect(function(input,GPE)if GPE
 local setVec=function(vec)return vec*(flySettings.flyspeed/vec.Magnitude)end
 game:GetService("RunService").Heartbeat:connect(function(step)if flying and c and c.PrimaryPart then local p=c.PrimaryPart.Position local cf=cam.CFrame local ax,ay,az=cf:toEulerAnglesXYZ()c:SetPrimaryPartCFrame(CFrame.new(p.x,p.y,p.z)*CFrame.Angles(ax,ay,az))if buttons.Moving then local t=Vector3.new()if buttons.W then t=t+(setVec(cf.lookVector))end if buttons.S then t=t-(setVec(cf.lookVector))end if buttons.A then t=t-(setVec(cf.rightVector))end if buttons.D then t=t+(setVec(cf.rightVector))end c:TranslateBy(t*step)end end end)
 
-
-
-
-
-
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/bitef4/Recode/main/UI/Kavo_1.lua"))()
-local Window = Library.CreateLib("VortX Hub | Arsenal | v1.5", "RedTheme")
+local Window = Library.CreateLib("VortX Hub | Arsenal | v1.5", "BlueTheme")
 
 local Welcome = Window:NewTab("Main")
-local MainSection = Welcome:NewSection("Welcome To AdvanceTech | " .. game.Players.LocalPlayer.Name)
+local MainSection = Welcome:NewSection("Welcome To VortX HUB | " .. game.Players.LocalPlayer.Name)
 
 local HitboxSection = Welcome:NewSection("> Hitbox Settings <")
 
